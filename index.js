@@ -13,6 +13,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use('/animation', express.static(path.join(__dirname, 'animation')));
+
 app.use('/mylibrary',express.static(path.join(__dirname,'library')));
 app.post('/fetchlibrary',(req,res)=>{
     let deviceID=req.body.deviceID;
